@@ -2,7 +2,6 @@
 
 html, body {
     margin: 0;
-    height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -75,4 +74,40 @@ html, body {
 
 .main {
     background-color: #E2E8F0;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 20px;
+    gap: 20px;
+    max-height: 100vh;
+}
+
+.card, .trendingCard, .announcementsCard {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.25);
+    padding: 12px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+    height: 200px;
+}
+
+.announcements {
+
+}
+
+.trending {
+    grid-column: 2 / 3;
 }
