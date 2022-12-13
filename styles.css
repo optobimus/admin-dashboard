@@ -109,22 +109,24 @@ button {
 
 .header {
     grid-column: 2 / 3;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.25);
+    z-index: +1;
 }
 
 .main {
     background-color: #E2E8F0;
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     gap: 25px;
     max-height: 100vh;
 }
 
-.card, .trendingCard, .announcementsCard {
+.card, .trendingCard, .announcementCard {
     background-color: white;
     border-radius: 12px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.25);
-    padding: 20px;
+    padding: 24px;
 }
 
 .project {
@@ -133,23 +135,63 @@ button {
     grid-row: span 2;
 }
 
+.project span, .trending span, .announcements span{
+    font-weight: 600;
+}
+
+.project p {
+    flex-grow: 1;
+}
+
 .cards {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    border-left: #1992D4;
 }
 
 .card {
     height: 180px;
+    display: flex;
+    flex-direction: column;
+    border-left: 8px solid #1992D4;
+
 }
 
-.announcements {
 
+.cardButtons {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-self: flex-end;
+    align-items: end;
+}
+
+.announcementBorder {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 10px;
+}
+
+.announcement {
+    height: max-content;
+}
+
+.announcementCard {
+    display: grid;
+    gap: 10px;
 }
 
 .trending {
     grid-column: 2 / 3;
+}
+
+.trending h3 {
+    margin-top: 0;
+}
+
+.trending p {
+    margin-top: 2px;
 }
 
 img {
