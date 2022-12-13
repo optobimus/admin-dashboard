@@ -150,11 +150,10 @@ button {
 }
 
 .card {
-    height: 180px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     border-left: 8px solid #1992D4;
-
 }
 
 
@@ -190,10 +189,27 @@ button {
     margin-top: 0;
 }
 
+.trendingCard {
+    display: flex;
+    flex-direction: column;
+}
+
 .trending p {
     margin-top: 2px;
 }
 
 img {
     border-radius: 50%;
+}
+
+.trendingItem img {
+    height: 40px;
+}
+
+
+.trendingItem {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 12px;
 }
